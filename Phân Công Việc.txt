@@ -29,7 +29,7 @@ Nhiem vu:  Quan ly khach hang.
 
 - DAO VIET DUNG: 
 Nhiem vu: Quan ly nha cung cap san pham. 
-+ Them nha cung cap..
++ Them nha cung cap.
 + Sua nha cung cap. 
 + Xoa nha cung cap. 
 + Tim nha cung cap. 
