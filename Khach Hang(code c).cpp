@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h> 
 #define MAX_CUSTOMERS 100 
-// ---------------------------------CODE CAC HAM QUAN LY KHACH HANG------------------------------------// 
+// ---------------------------------CODE CAC HAM QUAN LY KHACH HANG-------------------------------------// 
  typedef struct {
     int ma;
     char ten[50];
