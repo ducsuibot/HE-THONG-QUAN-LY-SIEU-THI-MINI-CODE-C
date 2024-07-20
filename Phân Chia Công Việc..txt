@@ -1,6 +1,6 @@
 GROUP 1: HE THONG QUAN LY SIEU THI MINI  
 
-# NGUYỄN MINH ĐỨC: 
+# NGUYỄN MINH ĐỨC : 
 Nhiệm vụ:     
 
  1. Viết báo cáo tổng quan về hệ thống bằng file word.  
