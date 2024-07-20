@@ -9,7 +9,7 @@
 #define MAX_EMPLOYEES 100  
  
 
-// Struct San pham =))
+// Struct San pham =)) 
 typedef struct {
     int ma;
     char ten[50];
@@ -581,7 +581,7 @@ void timNhaCungCap() {
     }
     fprintf(f, "SO LUONG NHA CUNG CAP: %d\n", soLuongNhaCungCap);
     for (int i = 0; i < soLuongNhaCungCap; i++) {
-        fprintf(f, "Ma nha cung cap: %d\n Ten nha cung cap: %s\n%sDia chi nha cung cap: \n%sSDT nha cung cap: \n", dsNhaCungCap[i].ma, dsNhaCungCap[i].ten, dsNhaCungCap[i].diaChi, dsNhaCungCap[i].soDienThoai);
+        fprintf(f, "Ma nha cung cap: %d\n Ten nha cung cap: %s\nDia chi nha cung cap: %s\nSDT nha cung cap: %s\n", dsNhaCungCap[i].ma, dsNhaCungCap[i].ten, dsNhaCungCap[i].diaChi, dsNhaCungCap[i].soDienThoai);
     }
     fclose(f);
     printf("Da luu danh sach nha cung cap vao tep nhacungcap.txt.\n");
@@ -609,7 +609,7 @@ void docNhaCungCapTuTep() {
 // ---------------------------------CODE CAC HAM QUAN LY HOA DON-------------------------------------// 
  
 // 1.Them hoa don 
-int hiura=0;
+
 void themHoaDon() {
     if (soLuongHoaDon >= MAX_BILLS) {
         printf("Khong the them hoa don moi. Danh sach da day.\n");
@@ -623,8 +623,14 @@ void themHoaDon() {
     printf("Nhap ma san pham: ");
     scanf("%d", &hd.maSanPham);
     printf("Nhap so luong san pham mua : ");
-    scanf("%d", &hd.soLuong); 
-    hd.tongGia = dsSanPham[hiura++].gia * hd.soLuong;
+    scanf("%d", &hd.soLuong);  
+    for(int i=0;i<soLuongSanPham;i++) 
+    {
+    if(dsSanPham[i].ma==hd.maSanPham)  
+   		{ 
+   			 hd.tongGia = dsSanPham[i].gia * hd.soLuong;
+		}
+	}
     printf("Nhap giam gia: ");
     scanf("%f", &hd.giamGia);
     hd.giaCuoi = hd.tongGia - hd.giamGia;
@@ -645,7 +651,13 @@ void suaHoaDon() {
             scanf("%d", &dsHoaDon[i].maSanPham);
             printf("Nhap so luong san pham moi: ");
             scanf("%d",&dsHoaDon[i].soLuong);
-            dsHoaDon[i].tongGia = dsSanPham[dsHoaDon[i].maSanPham].gia * dsHoaDon[i].soLuong;
+            for(int j=0;j<soLuongSanPham;j++) 
+   				 {
+   					 if(dsSanPham[j].ma==dsHoaDon[i].maSanPham)  // neu ma san pham trog danh sach = ma san phan trong hoa don ->
+   					{ 
+   							 dsHoaDon[i].tongGia = dsSanPham[j].gia * dsHoaDon[i].soLuong; 
+					}
+				}
             printf("Nhap giam gia moi: ");
             scanf("%f", &dsHoaDon[i].giamGia);
             dsHoaDon[i].giaCuoi = dsHoaDon[i].tongGia - dsHoaDon[i].giamGia;
@@ -726,7 +738,7 @@ void docHoaDonTuTep() {
 void tinhTongDoanhThu() {
     float tongDoanhThu = 0;
     for (int i = 0; i < soLuongHoaDon; i++) {
-        tongDoanhThu += dsHoaDon[i].giaCuoi;
+        tongDoanhThu += dsHoaDon[i].giaCuoi; // cong lan luot tung phan tu trong mang
     }
     printf("Tong doanh thu: %.2f\n", tongDoanhThu);
 }
@@ -753,7 +765,7 @@ void menuChinh() {
                 printf("1. Them san pham\n");
                 printf("2. Sua san pham\n");
                 printf("3. Xoa san pham\n");
-                printf("4. Tim san pham\n");
+                printf("4. Tim san pham theo ma\n");
                 printf("5. Tim san pham theo ten\n");
                 printf("6. Sap xep san pham theo gia\n");
                 printf("7. Sap xep san pham theo ten\n");
