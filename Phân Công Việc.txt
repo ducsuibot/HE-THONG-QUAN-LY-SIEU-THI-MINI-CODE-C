@@ -1,14 +1,28 @@
 GROUP 1: HE THONG QUAN LY SIEU THI MINI 
-- NGUYEN MINH DUC: 
+# NGUYEN MINH DUC (leader) : 
 Nhiem vu:   
 - Quan ly san pham:
 + Them san pham. 
 + Sua san pham. 
 + Xoa san pham. 
-+ Tim san pham.  
-+ Sap xep san pham. 
++ Tim san pham theo ma. 
++ Tim san phan theo ten.  
++ Sap xep san pham theo ma.
++ Sap xep san pham theo ten. 
 + Luu san pham vao file.   
 + Hien san pham tu file.
+  
+- Hàm MENU để người dùng điều khiển chương trình.
+ 
+# NGUYEN TIEN BANG: 
+Nhiem vu:   
+- Quan ly khach hang. 
++ them khach hang. 
++ Sua khach hang. 
++ Xoa khach hang. 
++ Tim khach hang. 
++ Luu danh sach khach hang vao file.   
++ Hien danh sach khach hang tu file.  
  
 - Quan ly nhan vien: 
 + Them nhan vien. 
@@ -17,17 +31,8 @@ Nhiem vu:
 + Tim nhan vien. 
 + Luu nhan vien vao file.  
 + Hien nhan vien tu file.
- 
-- NGUYEN TIEN BANG: 
-Nhiem vu:  Quan ly khach hang. 
-+ them khach hang. 
-+ Sua khach hang. 
-+ Xoa khach hang. 
-+ Tim khach hang. 
-+ Luu danh sach khach hang vao file.   
-+ Hien danh sach khach hang tu file.
 
-- DAO VIET DUNG: 
+# DAO VIET DUNG: 
 Nhiem vu: Quan ly nha cung cap san pham. 
 + Them nha cung cap.
 + Sua nha cung cap. 
@@ -36,7 +41,7 @@ Nhiem vu: Quan ly nha cung cap san pham.
 + Luu nha cung cap vao file.   
 + Hien nha cung cap tu file.
 
-- DONG DUC ANH: 
+# DONG DUC ANH: 
 Nhiem vu: Quan ly hoa don. 
 + Them hoa don. 
 + Sua hoa don. 
