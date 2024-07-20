@@ -3,11 +3,11 @@ GROUP 1: HE THONG QUAN LY SIEU THI MINI
 # NGUYỄN MINH ĐỨC: 
 Nhiệm vụ:     
 
-- Viết báo cáo tổng quan về hệ thống.  
+ 1. Viết báo cáo tổng quan về hệ thống bằng file word.  
 
-- Hàm MENU để người dùng điều khiển chương trình.  
+ 2. Hàm MENU để người dùng điều khiển chương trình.  
 
-- Viết hàm quản lý sản phẩm: 
+ 3. Viết hàm quản lý sản phẩm: 
 	+ Them san pham. 
 	+ Sua san pham. 
 	+ Xoa san pham. 
@@ -20,7 +20,7 @@ Nhiệm vụ:
 
 # NGUYỄN TIẾN BẰNG: 
 Nhiệm vụ:   
-- Viết hàm quản lý khách hàng. 
+ 1. Viết hàm quản lý khách hàng. 
 	+ them khach hang. 
 	+ Sua khach hang. 
 	+ Xoa khach hang. 
@@ -28,7 +28,7 @@ Nhiệm vụ:
 	+ Luu danh sach khach hang vao file.   
 	+ Hien danh sach khach hang tu file.  
  
-- Viết hàm quản lý nhân viên: 
+ 2. Viết hàm quản lý nhân viên: 
 	+ Them nhan vien. 
 	+ Sua nhan vien. 
 	+ Xoa nhan vien. 
@@ -38,7 +38,7 @@ Nhiệm vụ:
 
 # ĐÀO VIỆT DŨNG: 
 Nhiệm vụ: 
-- Viết hàm quản lý nhà cung cấp sản phẩm. 
+ 1. Viết hàm quản lý nhà cung cấp sản phẩm. 
 	+ Them nha cung cap.
 	+ Sua nha cung cap. 
 	+ Xoa nha cung cap. 
@@ -48,7 +48,7 @@ Nhiệm vụ:
 
 # DONG DUC ANH: 
 Nhiệm vụ: 
-- Viết hàm quản lý hoá đơn. 
+ 1. Viết hàm quản lý hoá đơn. 
 	+ Them hoa don. 
 	+ Sua hoa don. 
 	+ Xoa hoa don. 
