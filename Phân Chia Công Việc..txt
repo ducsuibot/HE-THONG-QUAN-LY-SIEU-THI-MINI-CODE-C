@@ -49,7 +49,7 @@ Nhiem vu: Quan ly hoa don.
 + Tim hoa don.  
 + Luu hoa don vao file. 
 + Hien hoa don tu file.
-+ Tinh tong doanh thu.  
++ Tinh tong doanh thu
  
  
 
