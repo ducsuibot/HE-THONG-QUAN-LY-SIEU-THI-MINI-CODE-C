@@ -117,7 +117,30 @@ void luuHoaDonVaoTep() {
     }
     fprintf(f, "So Luong Hoa Don: %d\n\n", soLuongHoaDon);
     for (int i = 0; i < soLuongHoaDon; i++) {
-        fprintf(f, "Ma Hoa Don: %d\nMa Khach Hang: %d | Ten Khach Hang: %s\nMa San Pham: %d | Ten san pham: %s\nSo Luong sp mua: %d\n", dsHoaDon[i].ma, dsHoaDon[i].maKhachHang,dsKhachHang[i].ten ,dsHoaDon[i].maSanPham,dsSanPham[i].ten, dsHoaDon[i].soLuong);
+        
+        //ma hoa don
+			fprintf(f,"Ma hoa don: %d\n",dsHoaDon[i].ma);  
+		// khach hang
+			fprintf(f,"Ma khach hang: %d | ",dsHoaDon[i].maKhachHang); 
+			for(int j=0;j<soLuongKhachHang;j++) 
+				{ 
+					if( dsHoaDon[i].maKhachHang==dsKhachHang[j].ma)//chay vong for de tim ma khach hang  
+						{ 
+								fprintf(f,"Ten khach hang: %s\n",dsKhachHang[j].ten); 
+						}
+				}   
+		//san pham
+			fprintf(f,"Ma San Pham: %d | ",dsHoaDon[i].maSanPham); 
+			for(int j=0;j<soLuongHoaDon;j++) 
+				{ 
+					if( dsHoaDon[i].maSanPham==dsSanPham[j].ma)//chay vong for de tim ma san pham
+						{ 
+								fprintf(f,"Ten San Pham: %s\n",dsSanPham[j].ten); 
+						}
+				}    
+		// so luong sp khach hang mua
+			fprintf(f,"So Luong Sp Mua: %d\n",dsHoaDon[i].soLuong);
+        
     }
     fclose(f);
     printf("Da luu danh sach nha cung cap vao tep hoadon.txt.\n");
