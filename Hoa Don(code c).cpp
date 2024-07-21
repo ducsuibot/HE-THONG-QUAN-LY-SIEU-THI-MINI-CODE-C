@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h> 
 #define MAX_BILLS 100 
@@ -14,8 +14,10 @@
 } HoaDon; 
 HoaDon dsHoaDon[MAX_BILLS];
 int soLuongHoaDon = 0;  
+
+ 
 // 1.Them hoa don 
-int hiura=0;
+
 void themHoaDon() {
     if (soLuongHoaDon >= MAX_BILLS) {
         printf("Khong the them hoa don moi. Danh sach da day.\n");
@@ -29,8 +31,14 @@ void themHoaDon() {
     printf("Nhap ma san pham: ");
     scanf("%d", &hd.maSanPham);
     printf("Nhap so luong san pham mua : ");
-    scanf("%d", &hd.soLuong); 
-    hd.tongGia = dsSanPham[hiura++].gia * hd.soLuong;
+    scanf("%d", &hd.soLuong);  
+    for(int i=0;i<soLuongSanPham;i++) 
+    {
+    if(dsSanPham[i].ma==hd.maSanPham)  
+   		{ 
+   			 hd.tongGia = dsSanPham[i].gia * hd.soLuong;
+		}
+	}
     printf("Nhap giam gia: ");
     scanf("%f", &hd.giamGia);
     hd.giaCuoi = hd.tongGia - hd.giamGia;
@@ -51,7 +59,13 @@ void suaHoaDon() {
             scanf("%d", &dsHoaDon[i].maSanPham);
             printf("Nhap so luong san pham moi: ");
             scanf("%d",&dsHoaDon[i].soLuong);
-            dsHoaDon[i].tongGia = dsSanPham[dsHoaDon[i].maSanPham].gia * dsHoaDon[i].soLuong;
+            for(int j=0;j<soLuongSanPham;j++) 
+   				 {
+   					 if(dsSanPham[j].ma==dsHoaDon[i].maSanPham)  // neu ma san pham trog danh sach = ma san phan trong hoa don ->
+   					{ 
+   							 dsHoaDon[i].tongGia = dsSanPham[j].gia * dsHoaDon[i].soLuong; 
+					}
+				}
             printf("Nhap giam gia moi: ");
             scanf("%f", &dsHoaDon[i].giamGia);
             dsHoaDon[i].giaCuoi = dsHoaDon[i].tongGia - dsHoaDon[i].giamGia;
@@ -127,6 +141,7 @@ void docHoaDonTuTep() {
     }  
     fclose(f);
 } 
+ 
 
 //---------------------------------HAM TINH TONG DOANH THU----------------------------------------------//
 void tinhTongDoanhThu() {
